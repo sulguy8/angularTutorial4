@@ -1,0 +1,11 @@
+<div style="border : solid; border-color : red">
+    <button (click)="changeStatus('comp1')">comp1</button>
+    <button (click)="changeStatus('comp2')">comp2</button>
+    <p>ex2-selector works!</p>
+    <p>Children Say : {{ testText }} </p>
+    <div style="border : solid; border-color : green">
+        <app-comp1 *ngIf="compStatus == 'comp1'" [toChildren]='testNum'></app-comp1>
+        <app-comp2 *ngIf="compStatus == 'comp2'" (fromChildren)='hello($event)'></app-comp2>
+    </div>
+</div>
+
