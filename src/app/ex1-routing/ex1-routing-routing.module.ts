@@ -10,6 +10,11 @@ const routes: Routes = [
     path: '',
     component: Ex1RoutingComponent,
     children: [
+      { 
+        path: '', 
+        redirectTo: '/ex1/page1', 
+        pathMatch: 'full' 
+      },
       {
         path: 'page1',
         component: Page1Component
